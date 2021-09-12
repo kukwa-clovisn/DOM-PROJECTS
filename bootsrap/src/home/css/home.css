@@ -1,0 +1,310 @@
+body {
+  overflow-x: hidden;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body .main {
+  background: url(/assets/dubai1.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  padding: 5%;
+}
+
+body .main header {
+  height: 20vh;
+}
+
+body .main header div {
+  height: auto;
+}
+
+body .main header div div {
+  height: auto;
+}
+
+body .main header div div div i {
+  font-size: 50px;
+  color: #376b92;
+}
+
+body .main nav {
+  width: 100%;
+  height: auto;
+}
+
+body .main nav ul {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+body .main nav ul li {
+  width: 15%;
+  margin: 1%;
+}
+
+body .main nav ul li a {
+  color: white;
+  text-decoration: none;
+  text-transform: capitalize;
+  font-size: 100%;
+  width: 100%;
+  background: white;
+  color: black;
+  border-radius: 10px;
+  text-align: center;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+body .main nav ul li a:hover {
+  color: white;
+  background-color: #7b39b9;
+}
+
+body .main nav ul li a:hover i {
+  color: white;
+}
+
+body .main nav ul li i {
+  color: black;
+  float: right;
+  padding: 5% 5% 0 0;
+}
+
+body .main .home {
+  width: 100vw;
+  height: auto;
+  color: white;
+}
+
+body .main .home h1 {
+  font-weight: 400;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+body .main .home h1 span {
+  opacity: 0;
+  -webkit-transform: translateY(100px);
+          transform: translateY(100px);
+}
+
+body .main .home span.fadeIn {
+  opacity: 1;
+  color: white;
+  -webkit-transform: translateY(100px);
+          transform: translateY(100px);
+}
+
+body .main .home .btn-btn {
+  width: 100%;
+  margin: auto;
+}
+
+body .main .home .btn-btn button {
+  width: 20%;
+  background-color: red;
+  margin: 0 2%;
+  -webkit-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+}
+
+body .main .home .btn-btn button a {
+  color: white;
+  text-decoration: none;
+}
+
+body .main .home .btn-btn button:hover {
+  background-color: #7b39b9;
+}
+
+body .main .home .main-bottom {
+  width: 80%;
+  height: 20vh;
+  margin: 2% auto;
+}
+
+body .main .home .main-bottom input {
+  outline: none;
+  height: 35%;
+}
+
+body .main .home .main-bottom button {
+  height: 35%;
+  margin: auto;
+  -webkit-transition: all 0.7s ease;
+  transition: all 0.7s ease;
+  border: 15px solid red;
+  background: white;
+}
+
+body .main .home .main-bottom button:hover {
+  background-color: lightgray;
+}
+
+body .main .home .main-bottom button:hover i {
+  color: purple;
+  padding-top: 3%;
+}
+
+body .main .home .main-bottom button i {
+  float: right;
+}
+
+body section {
+  background-color: #f7f8f9;
+}
+
+body section .section {
+  margin: auto;
+}
+
+body section .section div {
+  margin: 1%;
+  background-color: white;
+  -webkit-box-shadow: 1px 3px 3px 2px lightgray;
+          box-shadow: 1px 3px 3px 2px lightgray;
+}
+
+body section .section div p, body section .section div h3, body section .section div i {
+  padding-left: 3%;
+}
+
+body section .section div button {
+  width: 70%;
+  border: 1px solid gray;
+  margin: auto;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  background-color: gray;
+}
+
+body section .section div button a {
+  width: 100%;
+  text-decoration: none;
+  color: purple;
+}
+
+body section .section div button:hover {
+  background-color: black;
+}
+
+body section .section div button:hover a {
+  color: white;
+}
+
+body #accordion {
+  width: 100%;
+  height: auto;
+  margin: 5% auto;
+}
+
+body .icons div {
+  margin: 2% 3%;
+}
+
+body .icons div i {
+  color: tomato;
+  font-size: 3em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .form {
+  width: 100%;
+  height: 100vh;
+  background: url(/assets/R_estate3.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  opacity: 0.9;
+  color: #18212a;
+}
+
+body .form div {
+  width: 60vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+body .form div h1 {
+  font-size: 35px;
+}
+
+body .form div h4 {
+  font-size: 30px;
+  color: white;
+  font-weight: 600;
+}
+
+body .form div p, body .form section .section div h3, body section .section .form div h3, body .form section .section div i, body section .section .form div i {
+  text-align: center;
+  color: white;
+  font-weight: 600;
+}
+
+body .form form {
+  height: 90%;
+  background: white;
+  color: black;
+  margin: 3% auto;
+  -webkit-box-shadow: 1px 2px 2px 2px lightgray;
+          box-shadow: 1px 2px 2px 2px lightgray;
+}
+
+body .form form div {
+  width: 80%;
+  height: 10%;
+  margin: auto;
+  border: 1px solid gray;
+  margin-bottom: 1%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .form form div i {
+  color: red;
+}
+
+body .form form div input {
+  width: 90%;
+  height: 100%;
+  padding: 0 1px 1px 10px;
+  border: none;
+  outline: none;
+}
+
+body .form form button {
+  width: 30%;
+  position: relative;
+  top: 0;
+  left: 30%;
+}
+/*# sourceMappingURL=home.css.map */

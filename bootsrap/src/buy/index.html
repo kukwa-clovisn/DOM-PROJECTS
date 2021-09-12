@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>front end bootsrap tutorial</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" href="/src/buy/css/styles.css">
+</head>
+<body>
+   <nav class="navbar navbar-expand-lg navbar-dark">
+       <div class="container" id="container">
+           <a href="#" class="a text-capitalize text-center">digital real estate foundation</a>
+
+           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+                <i class="navbar-toggler-icon"></i>
+           </button>
+
+           <div class="collapse navbar-collapse" id="navmenu">
+               <ul class="navbar-nav">
+                    <li class="nav-item"><a href="/src/home/home.html" class="nav-link text-center text-decoration-none bg-white rounded ">home</a></li>
+                    <li class="nav-item"><a href="#join" class="nav-link text-center text-decoration-none bg-white rounded  ">join</a></li>
+                    <li class="nav-item"><a href="#invest" class="nav-link text-center text-decoration-none bg-white rounded  ">invest</a></li>
+                </ul>
+           </div>
+       </div>
+   </nav>
+   <!-- section -->
+   <section>
+       <div class="container d-lg-flex d-md-block  justify-content-space-evenly align-items-center">
+           <div class="container"> <br> <br>
+               <h1 class="text-center text-capitalize m-1"><span class="text-success"><a class="text-decoration-none" href="https://www.google.com">real</a> </span>  <span class="text-danger">estate</span> <span class="text-success">investment</span> </h1> <br>
+               <p class="lead text-sm-center">
+                   Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor ut ex aliquam nam maxime 
+                   aliquid sint debitis iure dolore, amet voluptatem quasi enim eum delectus ullam quis sunt, 
+               </p>
+               <div class="btn d-flex justify-content-space-between align-items-center">
+                   <button class="btn-success rounded p-2 m-2">invest</button>
+                   <button class="btn-success rounded p-2 m-2">learn</button>
+                   <button class="btn-success rounded p-2 m-2">join</button>
+               </div>
+               
+           </div>
+           <img class="img-fluid w-100" src="/assets/images (1).jpg" alt="">
+       </div>
+   </section>
+   <!-- section two -->
+   <section class="container-fluid bg-white m-2 p-5" id="section">
+       <div class="container d-lg-flex d-md-inline-block d-sm-block">
+            <div>
+                <h2 class="text-center text-danger text-uppercase">web hosting</h2>
+                <img class="img-fluid" src="/assets/download (1).jpg" alt="">
+                <p class="text-center text-dark">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, fugit.
+                    Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, velit. <br>
+                    <a href="#" class=" btn btn-info text-center text-decoration-none m-1">learn more...</a>
+                </p>
+            </div>
+            <div>
+                <h2 class="text-center text-danger text-uppercase">digital marketing</h2>
+                <img class="img-fluid" src="/assets/images (4).jpg" alt="">
+                <p class="text-center text-dark">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, fugit.
+                    Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, ipsa? <br>
+                    <a href="#" class=" btn btn-info text-center text-decoration-none m-1">learn more...</a>
+                </p>
+            </div>
+            <div class="">
+                <h2 class="text-center text-danger text-uppercase">forex trading</h2>
+                <img class="img-fluid" src="/assets/bitcoin.png" alt="">
+                <p class="text-center text-dark">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, fugit.
+                    Lorem ipsum dolor sit Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima, cumque. <br>
+                    <a href="#" class=" btn btn-info text-center text-decoration-none m-1">learn more...</a>
+                </p>
+            </div>
+       </div>
+   </section>
+   <!-- form validation -->
+   <div class="container-fluid form">
+         <h1 class="text-center text-capitalize">what we offer</h1>
+         <div class="container-fluid row">
+                <div class="col-lg-4 col-md-5 col-sm-10">
+                    <h3 class="text-uppercase text-center">real estate</h3>
+                    <img src="/assets/R_estate1.jpg" alt="c24/7 image"> <br>
+                    <button class="btn border rounded m-1">package 1</button>
+                    <button onclick="getPackage();" id="package1" class="btn border rounded m2 btn-success">buy</button>
+                </div>
+                <div class="col-lg-3 col-md-5 col-sm-10">
+                    <h3 class="text-uppercase text-center">import and export</h3>
+                    <img src="/assets/R_logo.png" alt="coffee image">
+                    <button class="btn border rounded">package 2</button>
+                    <button onclick="getPackage();" id="package2" class="btn border rounded m2 btn-success">buy</button>
+                </div>
+                <div class="col-lg-3 col-md-5 col-sm-10">
+                    <h3 class="text-uppercase text-center"><a class="text-decoration-none" href="commerce.html"> e-commerce</a></h3>
+                    <img src="/assets/dubai.jpg" alt="chain image">
+                    <button class="btn border rounded m-1">package 3</button>
+                    <button onclick="getPackage();" id="package3" class="btn border rounded m2 btn-success">buy</button>
+                </div>
+                <div class="col-lg-3 col-md-5 col-sm-10">
+                    <h3 class="text-uppercase text-center">web dev</h3>
+                    <img src="/assets/icons-hero.png" alt="spray image">
+                    <button class="btn border rounded m-1">package 4</button>
+                    <button onclick="getPackage();" id="package4" class="btn border rounded m2 btn-success">buy</button>
+                </div>
+
+                <div class="col-lg-3 col-md-5 col-sm-10">
+                    <h3 class="text-uppercase text-center">crypto trading</h3>
+                    <img src="/assets/bitcoin.png" alt="spray image">
+                    <button class="btn border rounded m-1">package 5</button>
+                    <button onclick="getPackage();" id="package5"class="btn border rounded m2 btn-success">buy</button>
+                </div>
+                <div class="col-lg-3 col-md-5 col-sm-10">
+                    <h3 class="text-uppercase text-center">entrepreneurship</h3>
+                    <img src="/assets/R-estate.jpg" alt="spray image">
+                    <button class="btn border rounded m-1">package 6</button>
+                    <button onclick="getPackage();" id="package6" class="btn border rounded m2 btn-success">buy</button>
+                </div>
+         </div>
+        
+         <div class="buttons">
+            
+            <button class="btn border rounded m-1">package 2</button>
+            <button class="btn border rounded m-1">package 3</button>
+            <button class="btn border rounded m-1">package 4</button>
+        </div>
+   </div>
+   <!-- 
+       project 
+       1) create a module for the log in input
+       2) create a dropdown in the start up page
+       3) create an animation in  the start up page using some keyframe stuffs
+       4) design a logo to make the project look different and special
+       5)build custom or side pages to add to the website 
+       6) start a live website with links to other websites
+       7)start been serious for once no jokes this time around 
+       8)pray
+       9)no procastination this time around
+    -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+    <script src="/src/buy/js/dist/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,274 @@
+@mixin positionRelative($top, $left) {
+    position: relative;
+    top: $top;
+    left: $left;
+}
+
+@mixin positionAbsolute($top, $left) {
+    position: relative;
+    top: $top;
+    left: $left;
+}
+
+@mixin displayflex($justify, $align) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+$white : white;
+$black : black;
+body{
+    overflow-x: hidden;
+    box-sizing: border-box;
+    .main{
+        background: url(/assets/dubai1.jpg);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        padding: 5%; 
+        header{
+            // background:radial-gradient(rgb(172,127,92), rgb(181,150,122), rgb(190, 170, 150)) ;
+            height: 20vh;
+            div{
+                height: auto;
+                div{
+                    height: auto;
+                    div{
+                        i{
+                            font-size: 50px;
+                            color: rgb(55,107,146);
+                        }
+                    }
+                }
+             }
+        }
+
+        nav{
+        width: 100%;
+        height: auto;
+            ul{
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                 li{
+                     width: 15%;
+                     margin: 1%;
+                      a{
+                            color: $white;
+                            text-decoration: none;
+                            text-transform: capitalize;
+                            font-size: 100%;
+                            width: 100%;
+                            background: $white;
+                            color: black;
+                            border-radius: 10px;
+                            text-align: center;
+                            // padding: 5%;
+                            transition: all 0.5s ease;
+                            &:hover{
+                                color: $white;
+                                background-color: rgb(123,57,185);
+                                i{
+                                     color: white;
+                                  }
+                            }
+                        }
+
+                        i{
+                            color: $black;
+                            float: right;
+                            padding: 5% 5% 0 0;
+                        }
+                }
+            }
+        }
+
+        .home{
+            width: 100vw;
+            height: auto;
+            color: $white;
+            h1{
+                font-weight: 400;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                transition: all 0.4s ease;
+            }
+            h1 span{
+                opacity: 0;
+                
+                transform: translateY(100px);
+            }
+            span.fadeIn{
+                opacity: 1;
+                color: white;
+                transform: translateY(100px);
+            }
+            .btn-btn{
+                width: 100%;
+                margin: auto;
+                button{
+                    width: 20%;
+                    background-color: red;
+                    margin:0 2%;
+                    transition: all 0.6s ease;
+                    a{
+                        color: $white;
+                        text-decoration: none;
+                    }
+                    &:hover{
+                        background-color: rgb(123,57,185);
+                    }
+                }
+            }
+            .main-bottom{
+                width: 80%;
+                height: 20vh;
+                // background-color: white;
+                margin:2% auto;
+                    input{
+                        outline: none;
+                        height: 35%;
+                    }
+                     button{
+                        height: 35%;
+                        margin: auto;
+                        transition: all 0.7s ease;
+                        border: 15px solid red;
+                        background: white;
+                        &:hover{
+                            background-color: lightgray;
+                            i{
+                                color: purple;
+                                padding-top: 3%;
+                            }
+                        }
+                        i{
+                            float: right;
+                        }
+                    }
+            }
+        }
+    }
+   
+    section{
+        background-color: rgb(247,248,249);
+        .section{
+            margin: auto;
+            div{
+                margin: 1%;
+                background-color: white;
+                box-shadow: 1px 3px 3px 2px lightgray;
+                p{
+                    padding-left: 3%;
+                }
+                h3{
+                    @extend p;
+                }
+                i{
+                    @extend p;
+                }
+                button{
+                    width: 70%;
+                    border: 1px solid gray;
+                    margin: auto;
+                    transition: all 0.4s ease;
+                    background-color: gray;
+                    a{
+                    width: 100%;
+                    text-decoration: none;
+                    color: purple;
+                   
+                     
+                    }
+                     &:hover{
+                         a{
+                             color: white;
+                         }
+                        background-color: black;
+                       
+                    }
+                }
+               
+            }
+        }
+    }
+
+    #accordion{
+        width: 100%;
+        height: auto;
+        margin: 5% auto;
+    }
+
+    .icons{
+        div{
+            margin: 2% 3%;
+            i{
+                color: tomato;
+                font-size: 3em;
+                @include displayflex(center,center);
+            }
+        }
+    }
+
+    .form{
+        width: 100%;
+        height: 100vh;
+        background: url(/assets/R_estate3.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        opacity: 0.9;
+        color: rgb(24,33,42);
+        div{
+            width: 60vw;
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+                flex-wrap: wrap;
+                h1{
+                    font-size: 35px;
+                }
+               h4{
+                   font-size: 30px;
+                   color: white;
+                   font-weight: 600;
+               }
+               p{
+                   text-align: center;
+                   color: white;
+                   font-weight: 600;
+               }
+        }
+        form{
+            height: 90%;
+            background: white;
+            color: black;
+            margin: 3% auto;
+            box-shadow: 1px 2px 2px 2px lightgray;
+            div{
+                width: 80%;
+                height: 10%;
+                margin: auto;
+                border: 1px solid gray;
+                margin-bottom: 1%;
+                @include displayflex(space-evenly, center);
+                i{
+                    color: red;
+                }
+                input{
+                    width: 90%;
+                    height: 100%;
+                    padding: 0 1px 1px 10px;
+                    border: none;
+                    outline: none;
+                }
+               
+            } 
+            button{
+                    width: 30%;
+                    @include positionRelative(0, 30% )
+                }
+        }
+    }
+
+}

@@ -1,0 +1,9 @@
+fontawesome/
+.vscode/
+style.scss
+style.css.map
+main.js
+main.html
+main.css
+node_modules/
+ass/

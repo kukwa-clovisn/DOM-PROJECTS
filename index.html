@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .div0{
+            width: 50vw;
+            height: 50vh;
+            margin: auto;
+        }
+        .div1{
+            width: 30vw;
+            height: 30vh;
+            background-color: red;
+            box-shadow: 0 3px 2px 1px black;
+        }
+        .div2{
+            width: 30vw;
+            height: 30vh;
+            background-color: mediumseagreen;
+            box-shadow: 0 3px 2px 1px black;
+        }
+        .div3{
+            width: 30vw;
+            height: 30vh;
+            background-color: blue;
+            box-shadow: 0 3px 2px 1px black;
+        }
+        .div4{
+            width: 30vw;
+            height: 30vh;
+            background-color: green;
+            box-shadow: 0 3px 2px 1px black;
+        }
+
+    </style>
+</head>
+<body>
+   <div class="div0">
+<img name="slide" width="400px"; height="auto">
+    </div>
+    <div class="divs" id="divs">
+        
+    </div>
+    <script>
+        var i = 0;
+
+        let images = [];
+        let time = 3000;
+
+        images[0] = "./ass/download (3).jpg";
+        images[1] = "./ass/download (4).jpg";
+        images[2] = "./ass/download (5).jpg";
+        images[3] = "./ass/download.jpg";
+
+        function change() {
+            document.slide.src = images[i];
+            if(i < images.length - 1) {
+                i++;
+            } else{
+                i = 0;
+            }
+
+            setTimeout("change()", 3000);
+        }
+        console.log(images)
+
+        window.onload = change();
+        let change_display = [];
+
+         change_display[0] = document.createElement('div.div1');
+        change_display[1] = document.createElement('div.div2');
+         change_display[2] = document.createElement('div.div3');
+          change_display[3] = document.createElement('div.div4');
+
+          function display() {
+             document.getElementById('divs').innerHTML = change_display[count];
+            let count =0;
+            if(count < change_display.length - 1) {
+                count++;
+            } else{
+                count = 0;
+            }
+
+            setTimeout("display()", 3000);
+          }
+    </script>
+    
+
+</body>
+</html>

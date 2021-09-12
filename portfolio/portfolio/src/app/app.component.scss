@@ -1,0 +1,99 @@
+
+    #home{
+        height: 90vh;
+        padding: 10px;
+        background-color: rgb(44, 40, 40);
+        box-shadow: 1px 3px 3px 2px black;
+            .left-section{
+                h3{
+                    color: white;
+                }
+                nav{ 
+                    // color: white;
+                    width: 100%;
+                    height: 15vh;
+                    background-color: inherit;
+                    ul{
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                        justify-content: space-evenly;
+                        align-items: center;
+                        li{
+                            width: 25%;
+                            height: 100%;
+                            margin: auto;
+                            padding: 0;
+                            a{
+                                width: 100%;
+                                height: 100%;
+                                text-decoration: none;
+                                text-align: center;
+                                color: white;
+                                text-transform: capitalize;
+                                font-size: 150%;
+                                margin: 0;
+                                transition: all 0.5s ease;
+                                &:hover{
+                                    border-bottom: 2px solid teal;
+                                    color: crimson;
+                                }
+                            }
+                        }
+                    }
+                }
+            
+          
+             }
+
+             .right-section{
+                 nav{ 
+                     width: 100%;
+                    //  div{
+                    //      width: 100%;
+                         ul{ 
+                             width: 100%;
+                             display: flex;
+                             justify-content: space-evenly;
+                             align-items: center;
+                             li{
+                                 a{
+                                     text-decoration: none;
+                                     color: black;
+                                     font-size: 150%;
+                                     text-transform: capitalize;
+                                     transition: all 0.5s ease;
+                                     &:hover{
+                                         border-bottom: 2px solid teal;
+                                         color: crimson;
+                                         font-size: 130%;
+                                     }
+                                 }
+                             }
+                         }
+                    //  }
+                 }
+                 
+                button{
+                    width: 50%;
+                    background-color: rgb(95, 16, 32);
+                    color: white;
+                    margin: 0 20%;
+                    outline: none;
+                }
+             }
+    }
+    #about{
+        width: 100%;
+        height: 100vh;
+        padding: 10px;
+        div{
+            box-shadow: 1px 2px 2px black;
+            img{
+                width: 100%;
+                height: auto;
+                margin: auto;
+                box-shadow: 1px 2px 2px black;
+            }
+        }
+    }

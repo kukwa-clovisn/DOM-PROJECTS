@@ -1,0 +1,157 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  scroll-behavior: smooth;
+  background-color: inherit;
+  overflow-x: hidden;
+}
+
+body nav {
+  background-color: #fab937;
+}
+
+body nav #container {
+  padding: 0;
+  margin: 0;
+}
+
+body nav #container .a {
+  width: 40%;
+  height: 100%;
+  padding: 5px;
+  font-size: 200%;
+  text-decoration: none;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  color: white;
+}
+
+body nav #container .a:hover {
+  color: crimson;
+}
+
+body nav #container .collapse {
+  width: 60%;
+}
+
+body nav #container ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 80%;
+  height: 100%;
+  position: relative;
+  top: 0;
+  left: 20%;
+}
+
+body nav #container ul li {
+  width: 100%;
+  margin: 3%;
+}
+
+body nav #container ul li a {
+  width: 100%;
+  text-transform: capitalize;
+  font-size: 150%;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  color: black;
+}
+
+body nav #container ul li a:hover {
+  color: tomato;
+  border: 2px solid mediumseagreen;
+}
+
+body section {
+  background-color: #fab937;
+  color: white;
+}
+
+body section div div button {
+  width: 20%;
+  position: relative;
+  left: 20%;
+  top: 30px;
+}
+
+body #section div div {
+  -webkit-box-shadow: 1px 3px 3px 2px gray;
+          box-shadow: 1px 3px 3px 2px gray;
+  margin: 2%;
+}
+
+body #section div div h2 {
+  padding: 5%;
+}
+
+body #section div div p {
+  padding: 5%;
+}
+
+body #section div div img {
+  width: 100%;
+  height: auto;
+  margin: 1% auto;
+}
+
+body #section div div:last-child img {
+  width: 70%;
+  height: auto;
+  margin: 1% 10%;
+}
+
+body .form {
+  width: 80%;
+  height: auto;
+}
+
+body .form div div {
+  margin: 3% auto !important;
+  padding: 5%;
+  -webkit-box-shadow: 1px 3px 3px 2px black;
+          box-shadow: 1px 3px 3px 2px black;
+  display: block;
+}
+
+body .form div div img {
+  width: 100%;
+  margin: 5% auto;
+}
+
+body .form div div button {
+  margin: 3% auto;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  width: 100%;
+}
+
+body .form div div button:hover {
+  background-color: crimson;
+}
+
+body .form .buttons {
+  margin: auto;
+}
+
+body .form .buttons button {
+  background-color: lightgray;
+  -webkit-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+}
+
+body .form .buttons button:hover {
+  background-color: #8c0c0c;
+  color: yellow;
+}
+/*# sourceMappingURL=styles.css.map */
