@@ -9,18 +9,6 @@
     <title>my dairy</title>
 </head>
 <body>
-    <header>
-        <nav class="header-left-content">
-            <i class="fa fa-bars" id="menubtn"></i>
-            <a href="#">home</a>
-        </nav>
-        <nav class="header-right-content">
-            <a href="#">about</a>
-            <a href="#">contact</a>
-            <a href="#">links</a>
-            <a href="#">code <i class="fa fa-download"></i></a>
-        </nav>
-    </header>
     <div class="menu">
         <ul>
             <li>contents</li>
@@ -36,47 +24,62 @@
             <li><a href="">follow me</a></li>
         </ul>
     </div>
-    <div class="showcase">
-        <h1>welcome to <span>KCN'S diary</span></h1>
-        <div>
-            <label for="name">password</label>
-            <input type="text" name="name" id="name" placeholder="Enter your Diary name..." required>
-        </div>
-        <div>
-            <label for="password">password</label>
-            <input type="password" name="password" id="password" placeholder="Enter password..." required>
-        </div>
-        <button id="log-in">log in <i class="fa fa-arrow-right"></i></button>
-        <p>don't have an account? <a href="">sign in</a> <span><a href=""> forgot password?</a></span></p>
-
-    </div>
-    <div class="main">
-        <div class="todo-head">
+    <div class="home">
+        <header>
+            <nav class="header-left-content">
+                <i class="fa fa-bars" id="menubtn"></i>
+                <a href="#">home</a>
+            </nav>
+            <nav class="header-right-content">
+                <a href="#">about</a>
+                <a href="#">contact</a>
+                <a href="#">links</a>
+                <a href="#">code <i class="fa fa-download"></i></a>
+            </nav>
+        </header>
+        <div class="showcase">
+            <h1>welcome to <span>KCN'S diary</span></h1>
             <div>
-                <!-- <i class="fa fa-user"></i> -->
-                <img src="/assets/k.jpg" alt="">
+                <label for="name">password</label>
+                <input type="text" name="name" id="name" placeholder="Enter your Diary name..." required>
             </div>
-            <h1>kukwa clovis ngong</h1>
-            <h2>student at <span>seven advance academy</span></h2>
-            <h2>fullstack web developer</h2>
-            <h2>kcn.123.com@gmail.com</h2>
-            <h2>kukwaclovisngong3@gmail.com</h2>
-            <h3>💔 in Christ alone❣️</h3>
+            <div>
+                <label for="password">password</label>
+                <input type="password" name="password" id="password" placeholder="Enter password..." required>
+            </div>
+            <button id="log-in">log in <i class="fa fa-arrow-right"></i></button>
+            <p>don't have an account? <a href="">sign in</a> <span><a href=""> forgot password?</a></span></p>
+    
         </div>
-        <div class="todo-body">
-            <h1>KCN's Diary<i class="fa fa-download"></i></h1> 
-            <input type="text" id="inputItem" name="text" placeholder="input new todo item" required>
-            <span><i class="far fa-laugh laugh"></i></span>
-            <button onclick="addTodo();">add todo item</button>
-            <div class="clipboard"></div>
-            <div class="todoItems">
-                <ul class="showItems">
-                    <!-- list items coming from data base -->
-                </ul>
+        <div class="main">
+            <div class="todo-head">
+                <div>
+                    <!-- <i class="fa fa-user"></i> -->
+                    <img src="/assets/k.jpg" alt="">
+                </div>
+                <h1>kukwa clovis ngong</h1>
+                <h2>student at <span>seven advance academy</span></h2>
+                <h2>fullstack web developer</h2>
+                <h2>kcn.123.com@gmail.com</h2>
+                <h2>kukwaclovisngong3@gmail.com</h2>
+                <h3>💔 in Christ alone❣️</h3>
             </div>
-            <button id="reset" onclick="removeAllTodos();">clear all todos</button>
+            <div class="todo-body">
+                <h1>KCN's Diary<i class="fa fa-download"></i></h1> 
+                <input type="text" id="inputItem" name="text" placeholder="input new todo item" required>
+                <span><i class="far fa-laugh laugh"></i></span>
+                <button onclick="addTodo();">add todo item</button>
+                <!-- <div class="clipboard"></div> -->
+                <div class="todoItems">
+                    <ul class="showItems">
+                        <!-- list items coming from data base -->
+                    </ul>
+                </div>
+                <button id="reset" onclick="removeAllTodos();">clear all todos</button>
+            </div>
         </div>
     </div>
+    
     <footer>&copy;coding <i> herald </i>KCN</footer>
     <script src="./app.js"></script>
 </body>

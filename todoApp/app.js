@@ -22,7 +22,7 @@ function addTodo() {
     if (getFromLocalStorage == null) {
         todoItems = [];
     } else {
-        todoItems = JSON.parse(getFromLocalStorage); //coverting the string in json object
+        todoItems = JSON.parse(getFromLocalStorage); //coverting the string into json object
     }
 
     todoItems.push(userData)
@@ -31,7 +31,7 @@ function addTodo() {
 }
 
 function displayTodo() {
-    let userData = inputItem.value;
+    // let userData = inputItem.value;
     let getFromLocalStorage = localStorage.getItem('new todo');
     if (getFromLocalStorage == null) {
         todoItems = [];
@@ -39,8 +39,17 @@ function displayTodo() {
         todoItems = JSON.parse(getFromLocalStorage);
     }
     let items = '';
-    todoItems.forEach((element, index) => {
-        items += `<li>${element} <span><i class="fa fa-trash"></i></span></li>`
+    todoItems.forEach((element,day,hour,mins,secs,month,amp,newDate) => {
+       newDate = new Date().toLocaleDateString('en-US', {year: 'numeric', month: 'short', day: 'numeric'});
+        let time = new Date();
+        amp = (hour >= 12 ) ? "PM" : "AM";
+       mins = time.getMinutes();
+       hour = time.getHours()
+       secs = time.getSeconds()
+       month = time.getMonth()
+       day = time.getDay()
+
+        items += `<li> <p> <i class="fas fa-calendar-alt" id="calendar"></i>${newDate}, ${hour}: ${mins}:${secs}</p> <p title="${element}">${element}</p><span><i class="fa fa-trash"></i></span></li>`
     });
     showItems.innerHTML = items;
     inputItem.value = "";

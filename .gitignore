@@ -1,7 +1,7 @@
 fontawesome/
 .vscode/
-style.scss
-style.css.map
+*.scss
+*.css.map
 main.js
 main.html
 main.css
