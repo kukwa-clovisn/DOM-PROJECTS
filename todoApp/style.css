@@ -1,10 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300&family=Ubuntu:wght@300&display=swap");
-*, body {
+*,
+body {
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: 'poppins', sans-serif;
+  font-family: 'Poppins', sans-serif;
   overflow-x: hidden;
 }
 
@@ -15,13 +16,15 @@ html {
 body {
   background-repeat: no-repeat;
   background-size: cover;
-  height: auto;
-  background-color: #bebebe;
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(21, 122, 253, 0.685)), color-stop(40%, rgba(171, 250, 171, 0.623)), to(rgba(20, 164, 212, 0.877)));
+  background: linear-gradient(to top, rgba(21, 122, 253, 0.685) 0%, rgba(171, 250, 171, 0.623) 40%, rgba(20, 164, 212, 0.877) 100%);
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 body header {
   width: 100vw;
-  height: 10vh;
+  height: 15vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -32,17 +35,26 @@ body header {
       -ms-flex-align: center;
           align-items: center;
   padding: 10px;
-  background-color: #52898b;
+  background: inherit;
 }
 
 body header .header-left-content {
-  width: 40%;
+  width: 25%;
   height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 body header .header-left-content i {
   color: white;
-  font-size: 150%;
+  font-size: 25px;
   margin: 0 5%;
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
@@ -58,12 +70,12 @@ body header .header-left-content a {
   text-decoration: none;
   text-transform: capitalize;
   margin: 0 7%;
-  font-size: 150%;
+  font-size: 20px;
 }
 
 body header .header-left-content a:hover {
   border-bottom: 3px solid whitesmoke;
-  color: tomato;
+  color: yellow;
 }
 
 @media screen and (max-width: 768px) {
@@ -90,15 +102,14 @@ body header .header-right-content {
 body header .header-right-content a {
   text-decoration: none;
   color: white;
-  font-size: 150%;
+  font-size: 19px;
   text-transform: capitalize;
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
 }
 
 body header .header-right-content a:hover {
-  border-bottom: 3px solid whitesmoke;
-  color: tomato;
+  color: yellow;
 }
 
 @media screen and (max-width: 768px) {
@@ -207,21 +218,34 @@ body .menu.menu-toggle {
 
 body .home {
   width: 100%;
-  background-color: #52898b;
-  border-radius: 0 0 0  95%;
+  height: 100vh;
+  background-color: inherit;
+  overflow: hidden;
+  position: relative;
 }
 
 body .showcase {
-  width: 35vw;
-  margin: 1.5% 0 4% 0;
+  width: 35%;
+  margin: 1.5% auto;
   background: white;
   border-radius: 5px;
   padding: 10px;
   height: 70vh;
   position: relative;
-  left: 32vw;
-  top: -3vh;
   z-index: 1;
+}
+
+@media screen and (max-width: 1000px) {
+  body .showcase {
+    width: 60%;
+    border-radius: 10px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  body .showcase {
+    width: 75%;
+  }
 }
 
 body .showcase.hide-showcase {
@@ -232,7 +256,7 @@ body .showcase.hide-showcase {
 
 @-webkit-keyframes hideTodo {
   0% {
-    left: 25vw;
+    left: 0;
   }
   100% {
     left: 200vw;
@@ -242,7 +266,7 @@ body .showcase.hide-showcase {
 
 @keyframes hideTodo {
   0% {
-    left: 25vw;
+    left: 0;
   }
   100% {
     left: 200vw;
@@ -257,10 +281,11 @@ body .showcase h1 {
   margin: 2% auto;
   color: #224272;
   font-size: 25px;
+  cursor: pointer;
 }
 
 body .showcase div {
-  width: 70%;
+  width: 90%;
   height: 25%;
   margin: auto;
   display: block;
@@ -268,22 +293,53 @@ body .showcase div {
 
 body .showcase div label {
   display: block;
-  padding: 3px 3px 3px 15px;
+  padding: 3px 30px;
   text-transform: capitalize;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 500px) {
+  body .showcase div label {
+    text-align: center;
+  }
 }
 
 body .showcase div input {
   width: 100%;
-  height: 40px;
+  height: 45px;
   padding: 2px 2px 2px 20px;
   outline: none;
+  font-size: 13px;
   border: none;
   background: #eeecec;
   border-radius: 60px;
   color: #224272;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
-body #name.wrong-name, body #password.wrong-password, body #name.wrong-info, body #password.wrong-info {
+@media screen and (max-width: 500px) {
+  body .showcase div input {
+    font-size: 10px;
+  }
+}
+
+body .showcase div input:hover {
+  border: 2px solid teal;
+}
+
+body .showcase div input:active {
+  border: 2px solid lightseagreen;
+}
+
+body .showcase div input:focus {
+  border: 2px solid #04b2dd;
+}
+
+body #name.wrong-name,
+body #password.wrong-password,
+body #name.wrong-info,
+body #password.wrong-info {
   animation: error 0.2s 6 linear alternate-reverse backwards;
 }
 
@@ -355,6 +411,7 @@ body .showcase p {
   padding: 5px;
   margin-left: 5%;
   font-size: 13px;
+  cursor: pointer;
 }
 
 body .showcase p a {
@@ -367,10 +424,43 @@ body .showcase p span {
   margin-right: 5%;
 }
 
+@media screen and (max-width: 1090px) {
+  body .showcase p {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  body .showcase p {
+    font-size: 13px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+body .showcase .errormsg {
+  text-align: center;
+  margin-top: -3%;
+  color: #f7224c;
+  text-transform: capitalize;
+  padding: 0 10px;
+  display: none;
+}
+
 body .main {
-  width: 80vw;
-  min-height: 90vh;
-  margin: auto;
+  width: 100%;
+  height: 75%;
   display: none;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
@@ -380,15 +470,31 @@ body .main {
           align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  background-color: #52898b;
+  padding: 20px;
+  background: inherit;
+  background-attachment: fixed;
+  background-size: cover;
+  position: relative;
+  top: 20vh;
+  left: 0;
 }
 
 body .main .todo-head {
-  width: 20vw;
-  height: auto;
+  width: 25vw;
+  height: 75vh;
   background: black;
-  position: relative;
-  top: -10vh;
+  position: fixed;
+  top: 17vh;
+  right: 5vw;
+  border-radius: 10px;
+  -webkit-animation: profile 20s 1 linear alternate forwards;
+          animation: profile 20s 1 linear alternate forwards;
+}
+
+@media screen and (max-width: 850px) {
+  body .main .todo-head {
+    width: 30vw;
+  }
 }
 
 body .main .todo-head div {
@@ -410,18 +516,27 @@ body .main .todo-head div img {
   width: 50%;
   border-radius: 50%;
   z-index: 1;
+  display: block;
+  position: relative;
+  -webkit-animation: nameimg 5s infinite linear alternate forwards;
+          animation: nameimg 5s infinite linear alternate forwards;
 }
 
-body .main .todo-head h1, body .main .todo-head h2, body .main .todo-head h3 {
-  color: white;
+body .main .todo-head h1,
+body .main .todo-head h2,
+body .main .todo-head h3 {
+  color: #d3d1d1;
   text-align: center;
   font-size: 15px;
-  padding: 10px;
+  padding: 6px;
   text-transform: capitalize;
+  font-weight: 300;
 }
 
 @media screen and (max-width: 768px) {
-  body .main .todo-head h1, body .main .todo-head h2, body .main .todo-head h3 {
+  body .main .todo-head h1,
+  body .main .todo-head h2,
+  body .main .todo-head h3 {
     font-size: 12px;
   }
 }
@@ -430,9 +545,81 @@ body .main .todo-head h2 {
   font-size: 12px;
 }
 
+@media screen and (max-width: 1000px) {
+  body .main .todo-head {
+    display: none;
+  }
+}
+
+@-webkit-keyframes profile {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes profile {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes nameimg {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(20px);
+            transform: translateX(20px);
+  }
+}
+
+@keyframes nameimg {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(20px);
+            transform: translateX(20px);
+  }
+}
+
 body .main .todo-body {
-  width: 30vw;
+  width: 35vw;
+  min-height: 50vh;
   background-color: white;
+  border-radius: 10px 10px 10px 10px;
+  padding: 10px 0;
+  position: absolute;
+  top: 0;
+  left: 27%;
+  margin: 1% auto;
+}
+
+@media screen and (max-width: 1000px) {
+  body .main .todo-body {
+    width: 60vw;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body .main .todo-body {
+    width: 70vw;
+    left: 15%;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  body .main .todo-body {
+    border-radius: 10px;
+  }
 }
 
 body .main .todo-body h1 {
@@ -442,10 +629,20 @@ body .main .todo-body h1 {
   padding: 10px;
   color: #224272;
   margin-left: 4%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 80px;
+  width: 90%;
 }
 
 body .main .todo-body h1 i {
-  float: right;
   margin-right: 6%;
   color: #497be8;
   cursor: progress;
@@ -468,6 +665,42 @@ body .main .todo-body span .laugh {
   margin: 1% 10%;
   color: #497be8;
   cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 768px) {
+  body .main .todo-body span .laugh {
+    position: relative;
+    left: 35%;
+  }
+}
+
+body .main .todo-body span .laugh:hover {
+  color: teal;
+}
+
+body .main .todo-body span .laugh:active {
+  -webkit-animation: laugh 2s infinite linear alternate forwards;
+          animation: laugh 2s infinite linear alternate forwards;
+}
+
+@-webkit-keyframes laugh {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes laugh {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 body .main .todo-body button {
@@ -486,13 +719,44 @@ body .main .todo-body button {
   cursor: pointer;
 }
 
+@media screen and (max-width: 768px) {
+  body .main .todo-body button {
+    width: 90%;
+    display: block;
+    margin: 1% 5%;
+  }
+}
+
 body .main .todo-body button:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  background: teal;
+}
+
+body .main .todo-body button:active {
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+}
+
+body .main .todo-body #error {
+  font-size: 12px;
+  color: rgba(231, 16, 16, 0.938);
+  text-align: center;
+  display: none;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  body .main .todo-body #error {
+    position: relative;
+    margin: 3% 0 -2% 0;
+    display: none;
+    height: 40px;
+    width: 90%;
+  }
 }
 
 body .main .todo-body .todoItems {
   width: 95%;
+  max-height: 60%;
   margin: 3% auto;
   margin-bottom: 2%;
   border-radius: 10px;
@@ -504,24 +768,28 @@ body .main .todo-body .todoItems ul {
 
 body .main .todo-body .todoItems ul li {
   width: 95%;
-  height: 15vh;
-  padding: 4px;
+  padding: 2px;
   margin: 1% auto;
   list-style-type: none;
   font-size: 15px;
   line-height: 23px;
-  border: 1px solid #f7f7f7;
   border-radius: 5px;
   display: inline-block;
   text-transform: capitalize;
-  margin: 1%;
+  position: relative;
   background-color: #f5f5f5;
   border: 1px solid #e7e5e5;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
-body .main .todo-body .todoItems ul li i {
-  float: right;
-  color: gray;
+body .main .todo-body .todoItems ul li span {
+  width: 15%;
+  height: 100%;
+  position: absolute;
+  right: -20%;
+  top: 0;
+  background: #e74c3c;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -531,23 +799,47 @@ body .main .todo-body .todoItems ul li i {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border-radius: 5px;
-  padding: 2px;
-  font-size: 20px;
-  color: black;
-  position: relative;
-  margin: 1%;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
   cursor: pointer;
-  position: relative;
-  top: -50px;
-  cursor: progress;
+}
+
+body .main .todo-body .todoItems ul li span i {
+  border-radius: 5px;
+  font-size: 26px;
+  color: white;
+  cursor: pointer;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+body .main .todo-body .todoItems ul li span i:active {
+  -webkit-transform: scale(0.7);
+          transform: scale(0.7);
+}
+
+body .main .todo-body .todoItems ul li:hover span {
+  right: 0;
+}
+
+body .main .todo-body .todoItems ul li i {
+  font-size: 26px;
+  color: white;
+  cursor: pointer;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+body .main .todo-body .todoItems ul li i:active {
+  -webkit-transform: scale(0.7);
+          transform: scale(0.7);
 }
 
 body .main .todo-body .todoItems ul li p {
   cursor: pointer;
   font-size: 15px;
   width: 90%;
-  padding: 10px 0 0 30px;
+  padding: 5px 0 0 30px;
   line-height: 23px;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -560,12 +852,23 @@ body .main .todo-body .todoItems ul li p:nth-child(odd) {
 }
 
 body .main .todo-body .todoItems ul li p #calendar {
-  position: relative;
-  left: -22vw;
-  top: -3px;
-  font-size: 20px;
+  position: absolute;
+  left: 1vw;
+  top: 13px;
+  font-size: 17px;
   color: #4a7fe7;
   cursor: pointer;
+}
+
+body .main .todo-body #pending {
+  text-align: center;
+  padding: 3px;
+  text-transform: capitalize;
+}
+
+body .main .todo-body #pending #count {
+  padding: 0 5px;
+  color: red;
 }
 
 body .main .todo-body #reset {
@@ -576,29 +879,9 @@ body .main .todo-body #reset {
   text-align: center;
 }
 
-@media screen and (max-width: 768px) {
-  body .main {
-    display: block;
-    margin: auto;
-  }
-  body .main .todo-body, body .main .todo-head {
-    margin: 2% auto;
-    padding: 10px;
-  }
-  body .main .todo-body button, body .main .todo-head button {
-    width: 90%;
-    margin: 3% 5%;
-  }
-  body .main .todo-body button #reset, body .main .todo-head button #reset {
-    margin: 2% auto;
-  }
-  body .main .todo-head {
-    width: 35vw;
-  }
-  body .main .todo-body {
-    width: 50vw;
-    min-height: 90vh;
-  }
+body .main button:active {
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
 }
 
 body .main.show-main {
@@ -629,21 +912,25 @@ body .main.show-main {
 
 body footer {
   width: 100vw;
-  height: 5vh;
+  height: 10vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: #4a7fe7;
+  color: #f2f2f2;
   font-size: 20px;
+  position: absolute;
+  bottom: 10px;
+  right: 70px;
 }
 
 body footer i {
-  color: brown;
+  color: rgba(255, 228, 75, 0.966);
+  padding: 0 4px;
 }
 /*# sourceMappingURL=style.css.map */

@@ -40,13 +40,14 @@
         <div class="showcase">
             <h1>welcome to <span>KCN'S diary</span></h1>
             <div>
-                <label for="name">password</label>
+                <label for="name">name</label>
                 <input type="text" name="name" id="name" placeholder="Enter your Diary name..." required>
             </div>
             <div>
                 <label for="password">password</label>
                 <input type="password" name="password" id="password" placeholder="Enter password..." required>
             </div>
+            <p class="errormsg">invalid log in data</p>
             <button id="log-in">log in <i class="fa fa-arrow-right"></i></button>
             <p>don't have an account? <a href="">sign in</a> <span><a href=""> forgot password?</a></span></p>
     
@@ -65,16 +66,17 @@
                 <h3>💔 in Christ alone❣️</h3>
             </div>
             <div class="todo-body">
-                <h1>KCN's Diary<i class="fa fa-download"></i></h1> 
+                <h1>KCN's Diary<i class="far fa-user" style="color: rgb(16, 16, 121);"></i></h1> 
                 <input type="text" id="inputItem" name="text" placeholder="input new todo item" required>
                 <span><i class="far fa-laugh laugh"></i></span>
                 <button onclick="addTodo();">add todo item</button>
-                <!-- <div class="clipboard"></div> -->
+                <p id="error"> please add a valid task      ❣️KCN❣️ </p>
                 <div class="todoItems">
                     <ul class="showItems">
                         <!-- list items coming from data base -->
                     </ul>
                 </div>
+                <p id="pending">you have <span id="count">3</span>pending tasks</p>
                 <button id="reset" onclick="removeAllTodos();">clear all todos</button>
             </div>
         </div>
