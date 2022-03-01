@@ -1,0 +1,27 @@
+{
+  "name": "my_portfolio",
+  "version": "1.0.0",
+  "description": "Kukwa Clovis Ngong ",
+  "main": "popper.min.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kukwa-clovisn/about-me.git"
+  },
+  "keywords": [
+    "html",
+    "css",
+    "javascript"
+  ],
+  "author": "Kukwa Clovis Ngong",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kukwa-clovisn/about-me/issues"
+  },
+  "homepage": "https://github.com/kukwa-clovisn/about-me#readme",
+  "devDependencies": {
+    "webpack": "^5.51.1"
+  }
+}

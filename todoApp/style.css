@@ -282,6 +282,34 @@ body .showcase h1 {
   color: #224272;
   font-size: 25px;
   cursor: pointer;
+  position: relative;
+}
+
+body .showcase h1 #welcome {
+  color: #dc4d14;
+}
+
+body .showcase h1 #welcome::before {
+  content: "";
+  width: 170px;
+  height: 40px;
+  position: absolute;
+  right: 3px;
+  -webkit-animation: run 4s steps(10, end) infinite;
+          animation: run 4s steps(10, end) infinite;
+  background: white;
+}
+
+@-webkit-keyframes run {
+  to {
+    right: -170px;
+  }
+}
+
+@keyframes run {
+  to {
+    right: -170px;
+  }
 }
 
 body .showcase div {
@@ -640,12 +668,36 @@ body .main .todo-body h1 {
           align-items: center;
   min-height: 80px;
   width: 90%;
+  position: relative;
+}
+
+body .main .todo-body h1::before {
+  content: "";
+  width: 170px;
+  height: 26px;
+  background: white;
+  position: absolute;
+  left: 0;
+  -webkit-animation: text-run 4s steps(10, end) infinite;
+          animation: text-run 4s steps(10, end) infinite;
 }
 
 body .main .todo-body h1 i {
   margin-right: 6%;
   color: #497be8;
   cursor: progress;
+}
+
+@-webkit-keyframes text-run {
+  to {
+    left: 170px;
+  }
+}
+
+@keyframes text-run {
+  to {
+    left: 170px;
+  }
 }
 
 body .main .todo-body #inputItem {
