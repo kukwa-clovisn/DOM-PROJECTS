@@ -86,43 +86,45 @@ function displayTodo() {
 
 // creating remove task function
 function removeTask(index) {
-    let getFromLocalStorage = localStorage.getItem('new todo')
-    todoItems = JSON.parse(getFromLocalStorage)
-    todoItems.splice(index, 1); //detete that item you've choosen
-    localStorage.setItem('new todo', JSON.stringify(todoItems)) //updating the local storage after deleting as item
-    displayTodo();
+    if (confirm("Are you sure you want to delete this task?")) {
+        let getFromLocalStorage = localStorage.getItem('new todo')
+        todoItems = JSON.parse(getFromLocalStorage)
+        todoItems.splice(index, 1); //detete that item you've choosen
+        localStorage.setItem('new todo', JSON.stringify(todoItems)) //updating the local storage after deleting as item
+        displayTodo();
+    } else {
+        displayTodo()
+    }
+
 }
 
-username.addEventListener('keyup', () => {
-    logInErroMsg.style.display = 'none'
-})
+// username.addEventListener('keyup', () => {
+//     logInErroMsg.style.display = 'none'
+// })
 
-password.addEventListener('keyup', () => {
-    logInErroMsg.style.display = 'none'
-})
-// attaching an event listerner to the log in button
-logInBtn.addEventListener('click', () => {
-    if (username.value === "kukwa clovis" && password.value === "herald") {
-        showcase.classList.add('hide-showcase');
-        // todoHead.classList.add('show-todo-head');
-        // todoBody.classList.add('show-todo-body');
-        main.classList.add('show-main');
-        username.value = "";
-        password.value = "";
-    } else if (username === "kukwa clovis" && password !== "herald") {
-        password.classList.toggle("wrong-password");
-        logInErroMsg.style.display = 'block'
+// password.addEventListener('keyup', () => {
+//     logInErroMsg.style.display = 'none'
+// })
+// // attaching an event listerner to the log in button
+// logInBtn.addEventListener('click', () => {
+//     if (username.value === "kukwa clovis" && password.value === "herald") {
+//         showcase.classList.add('hide-showcase');
+//         // todoHead.classList.add('show-todo-head');
+//         // todoBody.classList.add('show-todo-body');
+//         main.classList.add('show-main');
+//         username.value = "";
+//         password.value = "";
+//     } else if (username === "kukwa clovis" && password !== "herald") {
+//         password.classList.toggle("wrong-password");
+//         logInErroMsg.style.display = 'block'
 
-    } else if (username !== "kukwa clovis" && password === "herald") {
-        username.classList.toggle('wrong-name');
-        logInErroMsg.style.display = 'block'
+//     } else if (username !== "kukwa clovis" && password === "herald") {
+//         username.classList.toggle('wrong-name');
+//         logInErroMsg.style.display = 'block'
 
-    } else {
-        username.classList.toggle('wrong-info')
-        password.classList.toggle('wrong-info')
-        logInErroMsg.style.display = 'block'
-    }
-})
-
-
-window.onload = displayTodo();
+//     } else {
+//         username.classList.toggle('wrong-info')
+//         password.classList.toggle('wrong-info')
+//         logInErroMsg.style.display = 'block'
+//     }
+// })
