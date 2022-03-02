@@ -1,43 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./fontawesome/css/all.min.css">
-    <link rel="stylesheet" href="./style.css">
-    <title>my dairy</title>
-</head>
-<body>
-    <div class="menu">
-        <ul>
-            <li>contents</li>
-            <li><a href="">about</a></li>
-            <li><a href="">contact</a></li>
-            <li><a href="">links</a></li>
-            <li><a href="">download</a></li> <br>
-
-            <li>projects</li>
-            <li><a href="">todo app</a></li>
-            <li><a href="">calculator</a></li>
-            <li><a href="">baloon game</a></li>
-            <li><a href="">follow me</a></li>
-        </ul>
-    </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>KCN'S Dairy</title>
+  </head>
+  <body>
     <div class="home">
-        <header>
-            <nav class="header-left-content">
-                <i class="fa fa-bars" id="menubtn"></i>
-                <a href="#">home</a>
-            </nav>
-            <nav class="header-right-content">
-                <a href="#">about</a>
-                <a href="#">contact</a>
-                <a href="#">links</a>
-                <a href="#">code <i class="fa fa-download"></i></a>
-            </nav>
-        </header>
-        <div class="showcase">
+      <!-- <div class="showcase">
             <h1>welcome to <span id="welcome">KCN'S diary</span></h1>
             <div>
                 <label for="name">name</label>
@@ -51,38 +23,34 @@
             <button id="log-in">log in <i class="fa fa-arrow-right"></i></button>
             <p>don't have an account? <a href="">sign in</a> <span><a href=""> forgot password?</a></span></p>
     
+        </div> -->
+      <div class="main">
+        <div class="todo-body">
+          <h1 id="text-run">Coding<span>Herald</span></h1>
+          <input
+            type="text"
+            id="inputItem"
+            name="text"
+            placeholder="input new todo item"
+            required
+          />
+          <span class="span">KCN's Diary</span>
+          <button onclick="addTodo();">add todo item</button>
+          <p id="error">please add a valid task ❣️KCN❣️</p>
+          <div class="todoItems">
+            <ul class="showItems">
+              <!-- list items coming from data base -->
+            </ul>
+          </div>
+          <p id="pending">you have <span id="count"></span>pending tasks</p>
+          <button id="reset" onclick="removeAllTodos();">
+            clear all todos
+          </button>
         </div>
-        <div class="main">
-            <div class="todo-head">
-                <div>
-                    <!-- <i class="fa fa-user"></i> -->
-                    <img src="/assets/k.jpg" alt="">
-                </div>
-                <h1>kukwa clovis ngong</h1>
-                <h2>student at <span>seven advance academy</span></h2>
-                <h2>fullstack web developer</h2>
-                <h2>kcn.123.com@gmail.com</h2>
-                <h2>kukwaclovisngong3@gmail.com</h2>
-                <h3>💔 in Christ alone❣️</h3>
-            </div>
-            <div class="todo-body">
-                <h1 id="text-run">KCN's Diary<i class="far fa-user" style="color: rgb(16, 16, 121);"></i></h1> 
-                <input type="text" id="inputItem" name="text" placeholder="input new todo item" required>
-                <span><i class="far fa-laugh laugh"></i></span>
-                <button onclick="addTodo();">add todo item</button>
-                <p id="error"> please add a valid task      ❣️KCN❣️ </p>
-                <div class="todoItems">
-                    <ul class="showItems">
-                        <!-- list items coming from data base -->
-                    </ul>
-                </div>
-                <p id="pending">you have <span id="count">3</span>pending tasks</p>
-                <button id="reset" onclick="removeAllTodos();">clear all todos</button>
-            </div>
-        </div>
+      </div>
     </div>
-    
+
     <footer>&copy;coding <i> herald </i>KCN</footer>
     <script src="./app.js"></script>
-</body>
+  </body>
 </html>

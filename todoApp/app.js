@@ -21,9 +21,6 @@ inputItem.addEventListener('keyup', () => {
 })
 
 
-menubtn.addEventListener('click', () => {
-    menu.classList.toggle('menu-toggle');
-})
 displayTodo();
 
 function addTodo() {
@@ -80,7 +77,7 @@ function displayTodo() {
         month = time.getMonth()
         day = time.getDay()
 
-        items += `<li> <p> <i class="fas fa-calendar-alt" id="calendar"></i>${newDate}, ${hour}: ${mins}:${secs}</p> <p title="${element}">${element}</p><span onclick = "removeTask(${index})"><i class="fa fa-trash"></i></span></li>`
+        items += `<li> <p> <i class="fas fa-calendar-alt" id="calendar"></i>${newDate}, ${hour}: ${mins}:${secs}</p> <p title="${element}" id="content"><input type="checkbox" name="checkbox" id="checkbox" /> ${element}</p><span onclick = "removeTask(${index})">delete</span></li>`
     });
     showItems.innerHTML = items;
     inputItem.value = "";
@@ -128,19 +125,4 @@ logInBtn.addEventListener('click', () => {
 })
 
 
-// window.location.href = "url?videoid = dkfldfjlfk" (javascript routing)
-/*
-looping through and loading in the html
-socialMediaApps = [
-    {
-        title: 'kdfdk',
-        url: 'dkfldf'
-    },
-    etc...
-]
-socialMediaApps.forEach(item => {
-    socialItem = `div(html)`;
-    parentcontainer.appenchild(socialItem);
-    socialItem = "";
-})
-*/
+window.onload = displayTodo();
